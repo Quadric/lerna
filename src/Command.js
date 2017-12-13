@@ -100,7 +100,7 @@ class ValidationWarning extends Error {
 export default class Command {
   constructor(input, flags, cwd) {
     log.pause();
-    log.heading = "lerna";
+    log.heading = "lerna-wod";
 
     this.input = input;
     this._flags = flags;

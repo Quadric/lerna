@@ -1,6 +1,6 @@
 {
   "name": "lerna-wod",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "Tool for managing JavaScript projects with multiple packages [With Optional Deps]",
   "main": "lib/index.js",
   "files": [
