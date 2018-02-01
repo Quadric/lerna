@@ -25,7 +25,8 @@ describe("Package", () => {
         scripts: { "my-script": "echo 'hello world'" },
         dependencies: { "my-dependency": "^1.0.0" },
         devDependencies: { "my-dev-dependency": "^1.0.0" },
-        peerDependencies: { "my-peer-dependency": ">=1.0.0" },
+        optionalDependencies: { "my-optional-dependency": "^1.0.0" },
+        peerDependencies: { "my-peer-dependency": "^1.0.0" }
       },
       "/path/to/package",
     );
@@ -74,6 +75,12 @@ describe("Package", () => {
     });
   });
 
+  describe("get .optionalDependencies", () => {
+    it("should return the optionalDependencies", () => {
+    assert.deepEqual(pkg.optionalDependencies, { "my-optional-dependency": "^1.0.0" });
+    });
+  });
+
   describe("get .peerDependencies", () => {
     it("should return the peerDependencies", () => {
       expect(pkg.peerDependencies).toEqual({ "my-peer-dependency": ">=1.0.0" });
@@ -85,6 +92,7 @@ describe("Package", () => {
       expect(pkg.allDependencies).toEqual({
         "my-dependency": "^1.0.0",
         "my-dev-dependency": "^1.0.0",
+        "my-optional-dependency": "^1.0.0"
       });
     });
   });

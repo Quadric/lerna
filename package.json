@@ -1,7 +1,7 @@
 {
-  "name": "lerna",
+  "name": "lerna-wod",
   "version": "2.8.0",
-  "description": "Tool for managing JavaScript projects with multiple packages",
+  "description": "Tool for managing JavaScript projects with multiple packages [With Optional Deps]",
   "main": "lib/index.js",
   "files": [
     "bin",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lerna/lerna.git"
+    "url": "git+https://github.com/Quadric/lerna.git"
   },
   "author": "Sebastian McKenzie <sebmck@gmail.com>",
   "license": "MIT",

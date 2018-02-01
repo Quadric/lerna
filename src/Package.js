@@ -49,12 +49,21 @@ export default class Package {
     return this._package.devDependencies;
   }
 
+  get optionalDependencies() {
+    return this._package.optionalDependencies;
+  }
+
   get peerDependencies() {
     return this._package.peerDependencies;
   }
 
   get allDependencies() {
-    return Object.assign({}, this.devDependencies, this.dependencies);
+    return Object.assign(
+      {},
+      this.devDependencies,
+      this.optionalDependencies,
+      this.dependencies
+    );
   }
 
   get scripts() {
